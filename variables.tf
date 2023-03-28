@@ -8,6 +8,12 @@ variable "name" {
   description = "The name of the resource group to create"
 }
 
+variable "location" {
+  type        = string
+  description = "Location where the NSG will be created"
+  default     = "eastus"
+}
+
 variable "vnet_name" {
   type        = string
   description = "The name of the vnet where the subnet should be created"
