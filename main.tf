@@ -23,7 +23,7 @@ resource "azurerm_network_security_group" "nsg" {
   tags                = var.tags
 }
 
-resource "azurerm_network_security_group_association" "nsg-subnet-association" {
+resource "azurerm_subnet_network_security_group_association" "nsg-subnet-association" {
   subnet_id                 = azurerm_subnet.subnet.id
   network_security_group_id = azurerm_network_security_group.nsg.id
 }
