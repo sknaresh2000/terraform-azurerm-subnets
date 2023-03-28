@@ -79,3 +79,15 @@ variable "nsgrules" {
   description = "NSG rules that will be created in the NSG associated with the subnet"
   default     = {}
 }
+
+variable "service_endpoints" {
+  type        = list(string)
+  description = "The list of Service endpoints to associate with the subnet. Possible values include: Microsoft.AzureActiveDirectory, Microsoft.AzureCosmosDB, Microsoft.ContainerRegistry, Microsoft.EventHub, Microsoft.KeyVault, Microsoft.ServiceBus, Microsoft.Sql, Microsoft.Storage, and Microsoft.Web."
+  default     = null
+}
+
+variable "service_endpoint_policy_ids" {
+  type        = list(string)
+  description = "The list of IDs of Service Endpoint Policies to associate with the subnet."
+  default     = null
+}
