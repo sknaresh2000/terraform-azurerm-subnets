@@ -70,4 +70,6 @@ variable "nsgrules" {
     source_address_prefixes      = list(string)
     destination_address_prefixes = list(string)
   }))
+  description = "NSG rules that will be created in the NSG associated with the subnet"
+  default     = {}
 }
