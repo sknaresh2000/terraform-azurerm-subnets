@@ -62,7 +62,6 @@ variable "rt_table_id" {
 
 variable "nsgrules" {
   type = map(object({
-    name                         = string
     priority                     = number
     direction                    = string
     access                       = string
