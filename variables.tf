@@ -31,10 +31,11 @@ variable "private_endpoint_network_policies_enabled" {
 }
 
 variable "delegation_details" {
-  type = map(object({
-    service_name = string
-    actions      = list(string)
-  }))
+  type = object({
+    delegation_name = string
+    service_name    = string
+    actions         = list(string)
+  })
   description = "Delegation details for the created subnet"
   default     = null
 }
